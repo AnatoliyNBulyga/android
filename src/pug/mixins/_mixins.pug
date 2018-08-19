@@ -1,0 +1,8 @@
+// Общие миксины
+
+mixin icon(name, mode)
+
+	- mode = mode || ""
+
+	svg(class="icon icon-" + name + " " + mode)
+		use(xlink:href="img/sprite.svg#" + name)

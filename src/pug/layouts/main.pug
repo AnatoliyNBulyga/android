@@ -1,0 +1,22 @@
+include ../mixins/_mixins-links.pug
+
+block variables
+
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		// Подключение шапки в отдельном файле
+		include ./_head-part.pug
+	
+	body(class=pageClass)
+		
+		// Подключение контентной части на странице
+		block content
+
+		// Подключение отдельных скриптов на странице
+		block scripts	
+
+		// Подключение подвала в отдельном файле
+		include ./_footer-part.pug
+

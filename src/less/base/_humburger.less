@@ -1,0 +1,81 @@
+.toggle-menu {
+	width: 28px;
+	height: 18px;
+	position: absolute;
+	bottom: 25px;
+	right: 15px;
+	display: none;
+	z-index: 100;
+
+	span:after, span:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 9px;
+		}
+
+	span:after {
+		top: 18px;
+	}
+
+	span {
+		position: relative;
+		display: block;
+	}
+
+	span, span:after, span:before {
+		width: 100%;
+		height: 2px;
+		background-color: @ugly-purple;
+		transition: all .3s;
+		backface-visibility: hidden;
+		border-radius: 2px;
+	}
+	&.on span {
+		background-color: transparent;
+		&:before {
+			transform: rotate(45deg) translate(-1px, 0);
+		}
+		&:after {
+			transform: rotate(-45deg) translate(6px, -7px);
+		}
+	}
+}
+
+
+.hidden-menu {
+	position: absolute;
+	top: 72px;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+	display: none;
+	background-color: #fff;
+
+	ul {
+		box-shadow: inset 0 -2px 0 0 @pale-grey;
+
+		li {
+			display: block;
+
+			a {
+				display: block;
+				padding: 20px 16px;
+				text-decoration: none;
+				font-size: 1.125rem;
+				line-height: 1.33;
+
+				&:hover {
+					background-color: @pale-grey;
+				}
+
+				&:focus {
+					color: @black;
+				}
+			} 
+
+		}
+			
+	}
+
+}

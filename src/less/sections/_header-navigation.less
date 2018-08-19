@@ -1,0 +1,98 @@
+//Стили  для header
+.top-nav {
+	position: relative;
+	padding: 8px 0;
+	background-color: #fff;
+	margin-bottom: 20px;
+
+	&__logo {
+		display: block;
+		max-width: 112px;
+		margin-right: 42px;
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+
+		&-img {
+		margin-right: 8px;
+		display: inline-block;
+		vertical-align: middle;
+		}
+
+		&-description {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: @black;
+		}
+	}
+
+	&__menu {
+		margin: 0;
+		padding: 0;
+
+		&-list {
+			list-style-type: none;
+			display: inline-block;
+			a {
+				display: inline-block;
+				padding: 8px 22px;
+				border-radius: 6px;
+				.transition;
+				font-weight: 500;
+		  	color: @ugly-purple;
+		  	text-decoration: none;
+				line-height: 40px;
+				&:hover, &:active {
+								background-color: @pale-grey;
+				}
+				&:focus {
+								color: @black;
+				}
+			}			
+		}
+	}
+}
+
+.sign-in {
+	display: inline-block;
+	position: relative;
+	width: 300px;
+	&__input {
+		outline: none;
+		height: 40px;
+		padding: 8px 12px;
+		border-radius: 6px;
+		background-color: rgba(255, 255, 255, 0.8);
+		border: solid 1px @border-color;
+	}
+	&__submit {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+}
+
+		
+.subscribe-block {
+	display: flex;
+	align-items: center;
+	&__cta {
+		display: inline-block;
+		margin-right: 17px;
+		text-align: right;
+
+		&-slogan {
+			font-weight: 500;
+			color: @black;	
+		}
+
+		&-descr {
+			font-size: 13px;
+		}
+
+	}	
+}
+
+

@@ -1,0 +1,28 @@
+extends ../layouts/main.pug
+
+block variables
+	// Блок переменных, подставляем разный title и класс для body для разных страниц
+
+	- var title = "Главная страница";
+	- var pageClass= "home";
+
+block content
+	
+	include ../sections/header-navigation.pug
+	include ../sections/header.pug
+	include ../sections/section_1.pug
+	include ../sections/section_2.pug
+	include ../sections/section_3.pug
+	include ../sections/section_4.pug
+	include ../sections/section_5.pug
+	include ../sections/section_6.pug
+	include ../sections/section_6_1.pug
+	include ../sections/section_6_2.pug
+	include ../sections/section_7.pug
+	include ../sections/footer.pug
+
+
+	
+
+block scripts
+	//	Здесь можно подключать скрипты для конкретной страницы

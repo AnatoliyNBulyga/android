@@ -1,0 +1,231 @@
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+html, body {
+	font-family: Helvetica, Arial, "PingFang SC", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    color: @warm-grey;
+    background-color: @pale-grey;
+}
+
+/* fix for top margin collapsing and vertical scroll prevent for body tag, when body height = 100% */
+body::before {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 1px;
+	background-color: transparent;
+}
+
+a {
+    font-size: 0.9375rem;
+    color: @rich-purple;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+input, textarea {
+	font-size: 16px;
+	line-height: 1.5;
+	resize: vertical;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-weight: 600;
+}
+
+h1 {
+    font-size: 2.375rem;
+    line-height: 1.26;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 1.33;
+    font-weight: 600;
+    color: @black;
+}
+
+h2.heading_2 {
+    margin-bottom: 24px;
+    &--section_3 {
+        text-align: center;
+        color: #fff;
+        padding-bottom: 48px;
+        border-bottom: 1px solid rgba(248, 247, 250, 0.22);
+    }
+
+    &--section_5 {
+        color: @ugly-purple;
+
+    }
+
+    &--content {
+        color: #fff;
+        margin-bottom: 8px;
+    }
+
+    &--content-gray {
+        color: @black;
+    }
+}
+
+h3.heading-3 {
+    font-size: 1.125rem;
+    line-height: 1.56;
+    font-weight: normal;
+    color: #fff;
+    margin-bottom: 16px;
+
+    &--gray {
+        color: #000;
+    }
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.56;
+    margin-bottom: 24px;
+}
+
+.my-section {
+    margin-bottom: 64px;
+}
+
+.text--separate {
+    border-bottom: 1px solid @white-two;
+    padding-bottom: 88px;
+    margin-bottom: 0;
+}
+
+.section__list--ul.list--purple {
+    color: @black;
+
+    span {
+        color: @ugly-purple;
+        font-weight: 600;
+    }
+    
+}
+
+blockquote.section__blockquote {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 30px;
+    border-left: 3px solid @ugly-purple;
+    color: @ugly-purple;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+
+    &--gray {
+        margin: 0;
+        background-color: @white-two;
+        padding: 24px 24px 24px 81px;
+        border-left: 1px solid @ugly-purple;
+        font-size: 0.875rem;
+        line-height: 1.43;
+        color: @warm-grey;
+        font-weight: normal;
+        margin-bottom: 48px;
+    }
+}
+
+
+.note {
+    font-weight: 600;
+    color: @black;
+}
+
+strong {
+    font-size: 1.125rem;
+    line-height: 1.56;
+    color: @ugly-purple;
+    font-weight: normal;
+}
+
+.dark {
+    color: #fff;
+}
+
+.gray {
+    background-color: @white-two;
+}
+
+img {
+	display: block;
+    max-width: 100%;
+}
+
+.button {
+    .transition;
+    display: inline-block;
+    background-color: @ugly-purple;
+    color: #fff;
+    padding: 10px 24px;
+    font-size: 1.125rem;
+    line-height: 28px;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+    border-radius: 6px;
+    &:hover, &:focus {
+        background-color: @ugly-purple-dark;
+        text-decoration: none;
+    } 
+
+    &--submit {
+        padding: 8px 28px;
+        border-radius: 0 6px 6px 0;
+        border: none;
+        height: 40px;
+        font-size: 1rem;
+        cursor: pointer;   
+    } 
+
+    &--light {
+        background-color: transparent;
+        border: 1px solid @button-light;
+        color: @rich-purple;
+        font-size: 0.9375rem;
+        line-height: 1.33;
+        &:hover, &:focus {
+            background-color: @ugly-purple-dark;
+            color: #fff;
+
+        }
+    }
+
+}
+
+.star-opacity {
+    height: 19px;
+    width: 19px;
+    fill: rgba(255, 255, 255, 0.6);
+}
+
+.star-purple {
+    height: 19px;
+    width: 19px;
+    fill: @ugly-purple;
+}

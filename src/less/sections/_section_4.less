@@ -1,0 +1,110 @@
+.section {
+
+	&__list {
+		margin: 48px 0;
+		list-style-type: none;
+		font-size: 1.125rem;
+		line-height: 1.56;
+
+		&-item {
+			display: block;
+			margin-bottom: 48px;
+			position: relative;
+		  line-height: 1.56;
+		  padding-left: 80px;
+
+			&::before {
+				position: absolute;
+				top: -15px;
+				left: 24px;
+				display: inline-block;
+				vertical-align: top;
+				font-size: 2.5rem;
+				color: @ugly-purple;
+			}
+
+			&:first-child {
+				&::before {
+					content: "1";
+					top: 10px;		
+				}
+
+				&::after {
+					content: "";
+					height: 1px;
+					width: 100%;
+					background-color: @white-two;
+					position: absolute;
+					bottom: -24px;
+					left: 0;
+				}
+			}	
+
+			&:nth-child(2n) {
+				&::after {
+					content: "";
+					height: 1px;
+					width: 100%;
+					background-color: @white-two;
+					position: absolute;
+					bottom: -24px;
+					left: 0;
+				}
+
+				&::before {
+					content: "2";
+					bottom: -15px;
+				}
+			}
+
+			&:last-child {
+				&::before {
+					content: "3";
+					top: 0;
+				}
+			}
+
+		}
+		
+	}
+
+}
+
+.subscribe-block {
+
+	&--bg {
+		background-image: url(../../img/bg/coverFinalBgrnd@2x.jpg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		padding: 40px 36px;
+		margin-bottom: 42px;
+		border-radius: 7px;
+
+		.subscribe-block__cta-slogan {	
+			text-align: left;
+			font-size: 1.5rem;
+			font-weight: 600;
+			line-height: 1.33;
+			margin-bottom: 8px;
+			color: #fff;
+		}
+
+		.subscribe-block__cta-descr {
+			text-align: left;
+			color: @warm-grey;
+			font-size: 1.125rem;
+			line-height: 1.56;
+			color: #fff;
+		}
+
+		.sign-in__input {
+			height: 48px;
+		}
+
+		.sign-in__submit {
+			height: 48px;
+		}
+
+
+	}
+}
