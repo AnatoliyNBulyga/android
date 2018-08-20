@@ -14,14 +14,10 @@ $(document).ready(function() {
 			// Фунция прослушивания событий
 			_setUpListeners: function() {
 
-				$('#form')
-				.on('submit', function(event) {
-
-					formValidate._validateForm(event);
-
-				}).on('submit', formValidate._sendEmail);
-
-
+				$('.form')
+				.on('submit', formValidate._validateForm)
+				.on('submit', formValidate._sendEmail);
+	
 			},
 
 			// Приватные  методы
@@ -29,17 +25,14 @@ $(document).ready(function() {
 
 				event.preventDefault();
 
-				var form = $('#form');
-						input = form.find('input'),
+				var 
+						forms = $(this),
+						input = forms.find('input'),
 						value = input.val().trim(),
+						placeholder = input.attr('placeholder'),
+						placeholderInvalid = 'Not valid info',
 						valid = true;
-						
 
-					// $.each(function(index, val) {
-
-
-
-					// });
 
 				// Проверка на валидный email
 				if (input.attr('type').toLowerCase() === 'email') {
@@ -49,15 +42,19 @@ $(document).ready(function() {
 						var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
 
 						if (pattern.test(value)) {
+
+							input.attr('placeholder', placeholder);
 							input.removeClass('input--invalid');
-							form.trigger("reset");
+							forms[0].reset();
+							
+
 
 						} else {
 
 							input.addClass('input--invalid');
-							form.trigger("reset");
-							input.attr('placeholder', 'Not valid info');
-						
+
+							input.val(placeholderInvalid);
+
 							valid = false;
 
 						}
@@ -81,8 +78,6 @@ $(document).ready(function() {
 				}
 
 			}
-
-			
 
 		}
 

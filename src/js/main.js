@@ -3,13 +3,16 @@ $(document).ready(function() {
 	
 // Text input in form	
 	$('.sign-in__input').focus(function(){
-		var input = $(this);
-
-	 input.data('placeholder', input.attr('placeholder'));
-	 input.attr('placeholder', 'Filled text input');
+	var input = $(this);
+	
+	input.val('');
+	input.data('placeholder', input.attr('placeholder'));
+	input.attr('placeholder', 'Filled text input');
  });
+
  $('.sign-in__input').blur(function(){
  	var input = $(this);
+
 	input.attr('placeholder', input.data('placeholder'));
  });
 
