@@ -1,21 +1,20 @@
 // Секция 7
 
-section.section_7.my_section
+section.section_last.my_section
 	.container
-		.section_7__bg
+		.section_last__bg
 			.row
 				.col-md-10.offset-md-1
-					.subscribe-block.subscribe-block--shadow.justify-content-between
+					.subscribe-block.subscribe-block--shadow.wow.slideInUp.subscribe-block--gray
 						.subscribe-block__cta
-							.subscribe-block__cta-slogan Start your free trial today
-							.subscribe-block__cta-descr 7-day Trial • Easy to use • Cancel anytime
+							h2.heading_2.subscribe-block__cta-slogan Start your free trial today
+							.subscribe-block__cta-descr 7-day Trial • Cancel anytime
 						.sign-in
-							form
-								input.sign-in__input(type="text" placeholder="Your email address")
+							form(class="form" novalidate)
+								input.sign-in__input(type="email" placeholder="Your email address")
 								button.sign-in__submit.button.button--submit(type="submit") Get started
 
-			.row
-				.col-md-12
+			
 					.invate.text-center
 						span.invate__slogan Already a ProductName user?
 						a(href="#") Sign In →
