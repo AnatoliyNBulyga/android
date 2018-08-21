@@ -23,6 +23,11 @@ $(document).ready(function() {
 		return false;
 	});
 
+// wow.js
+new WOW({
+		offset: 100,
+		mobile: false
+	}).init();
     
 
 });

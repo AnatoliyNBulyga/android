@@ -27,6 +27,10 @@ body::before {
 	background-color: transparent;
 }
 
+.container {
+        max-width: 970px;
+    }
+
 a {
     font-size: 0.9375rem;
     color: @rich-purple;
@@ -54,6 +58,13 @@ h1 {
     font-weight: 600;
 }
 
+h1.heading_1 {
+    &--header {
+        margin-bottom: 16px;
+        color: #fff;
+    }
+}
+
 h2 {
     font-size: 1.5rem;
     line-height: 1.33;
@@ -63,15 +74,17 @@ h2 {
 
 h2.heading_2 {
     margin-bottom: 24px;
-    &--section_3 {
+    &--purple {
         text-align: center;
         color: #fff;
         padding-bottom: 48px;
+        margin-bottom: 56px;
         border-bottom: 1px solid rgba(248, 247, 250, 0.22);
     }
 
-    &--section_5 {
+    &--section_gray {
         color: @ugly-purple;
+        border-bottom: 1px solid @separate-color;
 
     }
 
@@ -85,7 +98,7 @@ h2.heading_2 {
     }
 }
 
-h3.heading-3 {
+h3.heading_3 {
     font-size: 1.125rem;
     line-height: 1.56;
     font-weight: normal;
@@ -218,6 +231,8 @@ img {
     }
 
 }
+
+// Modifide for svg
 
 .star-opacity {
     height: 19px;

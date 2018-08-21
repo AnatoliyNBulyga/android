@@ -37,7 +37,7 @@ $(document).ready(function() {
 				// Проверка на валидный email
 				if (input.attr('type').toLowerCase() === 'email') {
 
-					if (value !== '') {
+					if (value !== false) {
 
 						var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
 
@@ -72,6 +72,8 @@ $(document).ready(function() {
 				if (formValidate.isValid === true) {
 
 					alert('Sending form!');
+
+					console.log('Your form is sending!');
 
 				} else {
 					console.log('Validation Faled !');
