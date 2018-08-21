@@ -6,7 +6,7 @@
 	padding-top: 48px;
 	margin-bottom: 64px;
 	&__content {
-		padding: 56px 0;
+		padding-bottom: 56px;
 
 		&-left {
 
@@ -18,10 +18,21 @@
 
 	&__text {
 		opacity: .6;
+		&--section_gray {
+			opacity: 1;
+		}
 	}
 }
 
 .subscribe-block {
+
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--gray {
+  	margin-top: 137px;
+  }
 
 	&--shadow {
 		background-color: @pale-grey;
@@ -30,19 +41,26 @@
 		border-radius: 7px;
 		box-shadow: 0 20px 30px 0 rgba(85, 56, 152, 0.79);
 
-		.subscribe-block__cta-slogan {	
-			text-align: left;
-			font-size: 1.5rem;
-			font-weight: 600;
-			line-height: 1.33;
-			margin-bottom: 8px;
+		.subscribe-block__cta {
+			display: inline-block;
+			vertical-align: middle;
+			&-slogan {	
+				text-align: left;
+				font-size: 1.5rem;
+				font-weight: 600;
+				line-height: 1.33;
+				margin-bottom: 8px;
+			}
 		}
 
-		.subscribe-block__cta-descr {
-			text-align: left;
-			color: @warm-grey;
-			font-size: 1.125rem;
-			line-height: 1.56;
+		.subscribe-block__cta {
+
+			&-descr {
+				text-align: left;
+				color: @warm-grey;
+				font-size: 1.125rem;
+				line-height: 1.56;
+			}
 		}
 
 		.sign-in__input {

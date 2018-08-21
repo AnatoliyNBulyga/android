@@ -3,11 +3,17 @@ $(document).ready(function() {
 	
 // Text input in form	
 	$('.sign-in__input').focus(function(){
-	 $(this).data('placeholder',$(this).attr('placeholder'))
-	 $(this).attr('placeholder','Filled text input');
+	var input = $(this);
+	
+	input.val('');
+	input.data('placeholder', input.attr('placeholder'));
+	input.attr('placeholder', 'Filled text input');
  });
- $('input,textarea').blur(function(){
-	 $(this).attr('placeholder',$(this).data('placeholder'));
+
+ $('.sign-in__input').blur(function(){
+ 	var input = $(this);
+
+	input.attr('placeholder', input.data('placeholder'));
  });
 
 // begin toggle-menu button 
@@ -17,6 +23,11 @@ $(document).ready(function() {
 		return false;
 	});
 
+// wow.js
+new WOW({
+		offset: 100,
+		mobile: false
+	}).init();
     
 
 });

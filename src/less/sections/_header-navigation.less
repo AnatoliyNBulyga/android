@@ -57,29 +57,30 @@
 
 .sign-in {
 	display: inline-block;
-	position: relative;
-	width: 300px;
+	vertical-align: middle;
+
 	&__input {
+		display: inline-block;
+		vertical-align: top;
 		outline: none;
+		max-width: 180px;
 		height: 40px;
 		padding: 8px 12px;
-		border-radius: 6px;
+		border-radius: 6px 0 0 6px;
 		background-color: rgba(255, 255, 255, 0.8);
 		border: solid 1px @border-color;
 	}
 	&__submit {
-			position: absolute;
-			top: 0;
-			right: 0;
+		display: inline-block;
+		vertical-align: top;
 		}
 }
 
 		
 .subscribe-block {
-	display: flex;
-	align-items: center;
 	&__cta {
 		display: inline-block;
+		vertical-align: middle;
 		margin-right: 17px;
 		text-align: right;
 
