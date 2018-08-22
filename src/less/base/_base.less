@@ -32,11 +32,17 @@ body::before {
     }
 
 a {
-    font-size: 0.9375rem;
-    color: @rich-purple;
+    font-size: 1.125rem;
+    color: @ugly-purple;
     text-decoration: none;
-    &:hover {
+
+    &:hover, &:focus {
         text-decoration: underline;
+        color: @rich-purple;
+    }
+
+    &:disabled {
+        color: @disabled-link;
     }
 }
 
@@ -135,9 +141,10 @@ p {
 .section__list--ul.list--purple {
     color: @black;
 
-    span {
+    a {
         color: @ugly-purple;
         font-weight: 600;
+        font-size: 1.125rem;
     }
     
 }
@@ -203,10 +210,15 @@ img {
     text-align: center;
     outline: none;
     border-radius: 6px;
+
     &:hover, &:focus {
         background-color: @ugly-purple-dark;
         text-decoration: none;
-    } 
+    }
+    
+    &:disabled {
+        background-color: @disabled-button;
+    }
 
     &--submit {
         padding: 8px 28px;
@@ -214,7 +226,11 @@ img {
         border: none;
         height: 40px;
         font-size: 1rem;
-        cursor: pointer;   
+        cursor: pointer;
+
+        &:disabled {
+            background-color: @disabled-button;
+        }   
     } 
 
     &--light {
@@ -226,7 +242,10 @@ img {
         &:hover, &:focus {
             background-color: @ugly-purple-dark;
             color: #fff;
+        }
 
+        &:disabled {
+            border: 1px solid @disabled-form;
         }
     }
 

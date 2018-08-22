@@ -44,6 +44,7 @@
 		  	color: @ugly-purple;
 		  	text-decoration: none;
 				line-height: 40px;
+				font-size: 1rem;
 				&:hover, &:active {
 								background-color: @pale-grey;
 				}
@@ -69,15 +70,19 @@
 		border-radius: 6px 0 0 6px;
 		background-color: rgba(255, 255, 255, 0.8);
 		border: solid 1px @border-color;
+
+		&:disabled {
+			border: 1px solid @disabled-form;
+		}
 	}
 	&__submit {
 		display: inline-block;
 		vertical-align: top;
 		}
 }
-
-		
+	
 .subscribe-block {
+
 	&__cta {
 		display: inline-block;
 		vertical-align: middle;
